@@ -11,23 +11,20 @@ user to create and run programs in a variety of languages. For the purposes of C
 we will primarily be using Java. To install VScode, visit [this](https://code.visualstudio.com/download)
 website and download the version for your device.
 
-// insert image of VScode download website
-Downloading VScode //caption
+![Image](vscode-website-ss.png)
 
 In my case, I have prior experience working with VScode, so I did not need to go 
 through the installation process. VScode has many extensions you can add, but we will not
 be covering those for the purposes of this lab report. Once you download and open VScode,
 your screen should look something like this:
 
-// insert image of opened VScode
-Visual Studio Code //caption
+![Image](vscode-startscreen-ss.png)
 
 For this lab, we only worked with the terminal. To open the terminal on Mac, hover your mouse
 up to the navigation bar at the top left corner of the screen, and click "Window." Then, select 
 "New Window." It should look something like this:
 
-//insert image of hovering over window to open new terminal
-Open a New Terminal // caption
+![Image](vscode-openterminal-ss.png)
 
 Once you open a new terminal, you're ready to move onto Step 2!
 
@@ -43,8 +40,7 @@ account. The command-line looked something like this:
 Once we typed this, we were prompted to provide the password for the account. Once logged on,
 the terminal produced a message that looked something like this:
 
-// insert image of message in the Lab document
-Connecting to the Remote Server //caption
+![Image](remoteserverconnect-ss.png)
 
 After setting this up, our terminals are connected to a computer in the CSE basement.
 Any commands we run on our own computers, known as the *client*, will run on that computer,
@@ -68,8 +64,7 @@ the paths. (*CSE 15L Lecture 2*)
 I tried a couple of commands, but the one that stood out to me the most was the `ls` and `cat` 
 commands. Here is a screenshot of my terminal:
 
-// insert image of commands from lab document
-My Terminal //caption
+![Image](tryingcommands-ss.png)
 
 As you can observe, I used the `ls` command followed by the directory
 `/home/linux/ieng6/cs15lsp23/public`, and it printed that there was no such file or directory.
