@@ -1,5 +1,5 @@
 # Lab Report 1 - Remote Access and FileSystem (Week 1)
-`#000000`
+
 In this [lab](https://ucsd-cse15l-s23.github.io/week/week1/), we set up our
 CSE 15L accounts and ran some commands in a remotely connected VScode terminal.
 
