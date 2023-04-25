@@ -119,7 +119,7 @@ After initializing the server through the terminal, the string that the server s
 was now able to be updated according to the commands provided in the web address. 
 Here is an example of the server after adding a few messages:
 
-// insert screenshot of localhost:4000
+![Image](localhost_ss_2.png)
 
 In this first screenshot, the `handleRequest(URI url)` method is called, and it satisfies the first condition.
 For reference, this is the condition:
@@ -171,7 +171,7 @@ and the `\n` string, which creates a new line after the string.
 
 Here is a screenshot of the server when the `/add-message` request is typed into the web address:
 
-// insert screenshot of localhost:4000/add-message?s=<string>
+![Image](localhostreq_ss_2.png)
   
 Additionally, if the user makes a request that does not satisfy either of these conditions, it will return:
 
@@ -259,8 +259,8 @@ public class ArrayTests {
 
 The following screenshots showcase the output of running the tests, showing the symptom of the programs:
 
-//insert screenshot 1
-//insert screenshot 2
+![Image](reverseInPlace_output_ss_2.png)
+![Image](reverse_output_ss_2.png)
 
 After identifying the program's bugs, I then proceeded to fix the code. The following code blocks show the code before and after debugging:
 
