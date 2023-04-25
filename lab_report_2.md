@@ -183,6 +183,148 @@ updated through the request in the web address as well, since it is given by the
 
 
 # Part 2 - Debugging
+
+The other portion of this lab was concerned with finding test cases that make the program fail and debugging the program to make the test cases pass. 
+
+The following two methods in a filed named `ArrayExamples.java` have bugs in them:
+
+```
+public class ArrayExamples {
+
+    /* Changes the input array to be in reversed order */
+    
+    static void reverseInPlace(int[] arr) {    
+        for (int i = 0; i < arr.length; i += 1) {
+            arr[i] = arr[arr.length - i - 1];
+        }
+    }
+    
+    /* returns a *new* array with all the elements of the input array in
+    reversed order */
+    
+    static int[] reversed(int[] arr) {
+        int[] newArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i += 1) {
+            arr[i] = newArray[arr.length - i - 1];
+        }
+        return arr;
+    }
+}
+```
+
+The following test cases in another file named `ArrayTests.java` are failure inducing inputs:
+
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+    @Test
+    public void reverseManyItems() {
+        /* tests reverseInPlace method */
+        int[] numList = {0, 10, 20};
+        ArrayExamples.reverseInPlace(numList);
+        assertArrayEquals(new int[]{20, 10, 0}, numList);
+    }
+    
+    public void newArrayReversed() {
+        /* tests reversed method */
+        int[] numList = {5, 10, 15};
+        assertArrayEquals(new int[] {15, 10, 5}, ArrayExamples.reversed(numList));
+    }
+}    
+```
+
+The following test cases, in the same file as the previous two, do not induce a failure:
+
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+    @Test
+    public void testReverseInPlace() {
+        int[] input = {3};
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{3}, input1);
+    }
+    
+    @Test
+    public void testReversed() {
+        int[] input1 = {};
+        assertArrayEquals(new int[]{}, ArrayExamples.reversed(input1));
+    }
+}
+```
+
+The following screenshots showcase the output of running the tests, showing the symptom of the programs:
+
+//insert screenshot 1
+//insert screenshot 2
+
+After identifying the program's bugs, I then proceeded to fix the code. The following code blocks show the code before and after debugging:
+
+```
+// BEFORE DEBUGGING
+public class ArrayExamples {
+
+    /* Changes the input array to be in reversed order */
+    
+    static void reverseInPlace(int[] arr) {    
+        for (int i = 0; i < arr.length; i += 1) {
+            arr[i] = arr[arr.length - i - 1];
+        }
+    }
+    
+    /* returns a *new* array with all the elements of the input array in
+    reversed order */
+    
+    static int[] reversed(int[] arr) {
+        int[] newArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i += 1) {
+            arr[i] = newArray[arr.length - i - 1];
+        }
+        return arr;
+    }
+}
+```
+
+```
+// AFTER DEBUGGING
+public class ArrayExamples {
+
+  /* Changes the input array to be in reversed order */
   
+    static void reverseInPlace(int[] arr) {
+        int[] arrCopy = arr.clone();
+        for(int i = 0; i < arr.length; i += 1) {
+            arr[i] = arrCopy[arrCopy.length - i - 1];
+        }
+    }
+
+  /* Returns a *new* array with all the elements of the input array in reversed order */
+  
+    static int[] reversed(int[] arr) {
+        int[] newArray = new int[arr.length];
+        for(int i = 0; i < arr.length; i += 1) {
+            newArray[i] = arr[arr.length - i- 1];
+        }
+        return newArray;
+    }
+}
+```
+
+The initial `reverseInPlace(int[] arr)` method was failing because the for loop kept changing the elements and updating to the already updated elements of the same list. The solution to this bug was to make a copy of the list and update the list according to the copy.
+
+The initial `reversed(int[] arr)` method was failing because it was updating the array given instead of updating the new array. The solution to this bug was to update the new array index to be the updated index of the original array.
 
 
+# Part 3 - Reflection
+
+*In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn't know before.*
+
+In week 2 and in this lab report, I learned how to write a web server using java code. Previously, my only experience with coding a website was with HTML and CSS. Being able to see what code is needed to initialize a server and how to write code to take requests at the web address line was super interesting and made me wonder how this can be applied to more advanced web applications. Initially, I struggled to conceptualize how web servers worked and had a hard time coding the `StringServer.java` program. However, with the assistance of the CSE 15L instruction team, I was soon able to code a web server and make it actually work according to the instructions. 
+
+--- 
+
+Thank you for reading! :)
