@@ -73,6 +73,15 @@ Not only did it show me the directories directly contained inside  `technical`, 
 
 Sources used:
 * ChatGPT: I used ChatGPT to get a simple explanation of this command option.
+- ChatGPT Prompts
+
+     - "What are some command-line options for find and how do you use them?"
+            
+            ```
+            -type: This option is used to search for files of a specific type. For example, 
+            to  find all directories in the current directory, you can use the command:                   
+            find . -type d
+            ```
 * [Linux Manual Page](https://man7.org/linux/man-pages/man1/find.1.html): I used the Linux manual to learn about what specific files could be found using the `-type` option.
 
 
@@ -138,6 +147,18 @@ It's worth mentioning that I used more than one command option here. To limit th
 
 Sources used:
 * ChatGPT: I used ChatGPT to get a simple explanation of this command option.
+- ChatGPT Prompts
+
+     - "What are some command-line options for find and how do you use them?"
+            
+            ```
+           -size: This option is used to search for files of a specific size. For example, 
+           to find all files in the current directory that are larger than 1 MB, you can use 
+           the command:
+           
+           find . -size +1M
+            ```
+
 * [Linux Manual Page](https://man7.org/linux/man-pages/man1/find.1.html): I used the Linux manual to learn about what units the `-size` command is able to take to find a file of a specific size.
 
 
@@ -209,6 +230,17 @@ Again, notice that I restricted the type of files to be only directories. If I h
 
 Sources used:
 * ChatGPT: I used ChatGPT to get a simple explanation of this command option.
+- ChatGPT Prompts
+
+     - "Can you give me some more options and tell me how they are used?" (referring to the previous question)
+            
+            ```
+           -user: This option is used to search for files owned by a specific user. For example, to find all files 
+           in the current directory owned by the user "john", you can use the command:
+           
+           find . -user john
+            ```
+
 * [Linux Manual Page](https://man7.org/linux/man-pages/man1/find.1.html): I used the Linux manual to get an official definition of the `-user` command option.
 * [Alphr](https://www.alphr.com/check-who-owns-a-file-linux/): I used Alphr to learn how to find the owner of a file or directory using the `ls -l` command.
 
@@ -297,6 +329,32 @@ This command line argument that used the `-print` option combined *all* of the `
 
 Sources used:
 * ChatGPT: I used ChatGPT to get a simple explanation of this command option. I also used it to find more interesting use cases for `-print` that were not explicitly listed in the manual page.
+- ChatGPT Prompts
+
+     - "Can you give me some more options and tell me how they are used?" (referring to the previous question)
+            
+            ```
+           -print: This option is used to print the names of the files that are found. For 
+           example, to print the names of all files in the current directory and its 
+           subdirectories, you can use the command:
+           
+           find . -print
+            ```
+     - "What special uses does the -print command option for find have?"
+           ```
+           Combine with other commands using the pipe (|) symbol: You can use the -print option 
+           in combination with other find options and the pipe (|) symbol to pass the file names 
+           to other commands. For example, the following command will find all .txt files in the 
+           current directory and pipe their names to the xargs command, which will run the cat c
+           ommand on each file:
+           
+           find . -type f -name "*.txt" -print | xargs cat
+           
+           This command will concatenate the contents of all .txt files in the current directory 
+           and print them to the terminal.
+           
+           ```
+
 * [Linux Manual Page](https://man7.org/linux/man-pages/man1/find.1.html): I used the Linux manual to get an official definition of the `-print` command option.
 
 ---
