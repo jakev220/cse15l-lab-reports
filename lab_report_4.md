@@ -19,8 +19,7 @@ For the purposes of this lab report, I will only be reproducing tasks 4-9.
 
 ## 1) Logging In
 
-// insert screenshot of step 4
-
+![Image](step4-lab7-lr4.png)
 To log into my student account, I typed the following in the command line:
 
 ```
@@ -40,8 +39,7 @@ $ git clone https://github.com/ucsd-cse15l-s23/lab7
 
 Typing this in the command line cloned the repository into my GitHub account, as shown in the screenshot below.
 
-// insert screenshot of step 5
-
+![Image](step5-lab7-lr4.png)
 
 ## 3) Running Tests
 
@@ -55,7 +53,7 @@ $ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUn
 
 When the tests were ran, this is the error that was produced:
 
-// insert screenshot of step 6
+![Image](step6-lab7-lr4.png)
 
 
 ## 4) Debugging the Code in the Command Line
@@ -68,7 +66,7 @@ $ vim ListExamples.java
 
 Typing that into the command line took me to this screen, shown below:
 
-// insert screenshot of step 7
+![Image](step7-lab7-lr4.png)
 
 Here are the keys that were pressed to get to the point of the error:
 `<up><up><up><up><up><up><right><right><right><right><right><right><right><right><right><right><right><right>`
@@ -86,7 +84,7 @@ To check the tests, I had to compile and run `ListExamplesTests.java` again. The
 
 With that being done, the tests were compiled, ran, and passed! Here is what was returned in the terminal:
 
-// insert screenshot of step 8
+![Image](step8-lab7-lr4.png)
 
 
 ## 6) Committing Changes and Pushing to Github
@@ -102,7 +100,7 @@ In the first command, I had to add all of my modified files, which in this case 
 
 Here is what appeared in my terminal after using these two commands:
 
-//insert screenshot of step 9
+![Image](step9-lab7-lr4.png)
 
 ---
 
