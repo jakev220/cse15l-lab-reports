@@ -73,7 +73,7 @@ Here are the keys that were pressed to get to the point of the error:
 
 Once I reached that point, I pressed the `<i>` key to enter insert mode. Then, I clicked `<backspace>` on `index1` and replaced the `1` with `2`. Then, I pressed the following keys:
 
-`<esc>` to exit insert mode, and `:wq` to save and quit vim. 
+`<esc>` to exit insert mode, and `:wq` and `enter` to save and quit vim. 
 
 
 ## 5) Checking the Tests
@@ -85,12 +85,12 @@ To check the tests, I had to compile and run `ListExamplesTests.java` again. The
 
 The 
 
-`javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` 
+`javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java <ENTER>` 
 
 was 5 up in the search history, so I used the up arrow to access it.
 Similarly, I accessed the 
 
-`-cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` 
+`-cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests <ENTER>` 
 
 the same way, as it was 5 up in the history.
 
@@ -104,11 +104,12 @@ With that being done, the tests were compiled, ran, and passed! Here is what was
 Now that the bug has been fixed and the tests have been passed, it's time to commit the changes and push them to my GitHub account. In the command line, I wrote the following commands:
 
 ```
-$ git add .
-$ git commit -m "changed index 1 to index 2 in final loop of merge method"
+$ git add . <ENTER>
+$ git commit -m "changed index 1 to index 2 in final loop of merge method" <ENTER>
+$ git push <ENTER>
 ```
 
-In the first command, I had to add all of my modified files, which in this case was just `ListExamples.java`. Once the modified file was saved, I could then add a commit message using the second command. My commit message describes exactly what changes I made to the code, for the purposes of being detailed. Once that was entered, my changes have been made!
+In the first command, I had to add all of my modified files, which in this case was just `ListExamples.java`. Once the modified file was saved, I could then add a commit message using the second command. My commit message describes exactly what changes I made to the code, for the purposes of being detailed. Once that was entered, I push the changes to GitHub and my changes have been made!
 
 Here is what appeared in my terminal after using these two commands:
 
