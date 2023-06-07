@@ -69,9 +69,10 @@ Typing that into the command line took me to this screen, shown below:
 ![Image](step7-lab7-lr4.png)
 
 Here are the keys that were pressed to get to the point of the error:
-`<up><up><up><up><up><up><right><right><right><right><right><right><right><right><right><right><right><right>`
 
-Once I reached that point, I pressed the `<i>` key to enter insert mode. Then, I clicked `<backspace>` on `index1` and replaced the `1` with `2`. Then, I pressed the following keys:
+`44G <right><right><right><right><right>`
+
+Typing `44G` in vim takes you to the start of the 44nd line. From there, click on `right` until you reach the desired point to edit. Once I reached that point, I pressed the `<i>` key to enter insert mode. Then, I clicked `<backspace>` on `index1` and replaced the `1` with `2`. Then, I pressed the following keys:
 
 `<esc>` to exit insert mode, and `:wq` and `enter` to save and quit vim. 
 
