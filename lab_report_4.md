@@ -23,7 +23,7 @@ For the purposes of this lab report, I will only be reproducing tasks 4-9.
 To log into my student account, I typed the following in the command line:
 
 ```
-$ ssh cs15lsp23bn@ieng6.ucsd.edu
+$ ssh cs15lsp23bn@ieng6.ucsd.edu <ENTER>
 ```
 
 Once I entered my password, I was logged in, as you can see in the screenshot above.
@@ -34,7 +34,7 @@ Once I entered my password, I was logged in, as you can see in the screenshot ab
 In this step, I cloned a fork of the repository that was given in the lab instructions. I typed the following in the command line:
 
 ```
-$ git clone https://github.com/ucsd-cse15l-s23/lab7
+$ git clone https://github.com/ucsd-cse15l-s23/lab7 <ENTER>
 ```
 
 Typing this in the command line cloned the repository into my GitHub account, as shown in the screenshot below.
@@ -46,8 +46,8 @@ Typing this in the command line cloned the repository into my GitHub account, as
 To run the tests, I used some code from [Week 3](https://ucsd-cse15l-s23.github.io/week/week3/). Before that, I typed `$ cd lab7` to get into the correct directory to run these tests. Once I was in that directory, I pasted the following code using `cmd - V`:
 
 ```
-$ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
-$ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+$ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java <ENTER>
+$ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests <ENTER>
 
 ```
 
@@ -61,7 +61,7 @@ When the tests were ran, this is the error that was produced:
 To edit the `ArrayExamples.java` file in the command line, I used the `vim` command. This is what I typed into the command line:
 
 ```
-$ vim ListExamples.java
+$ vim ListExamples.java <ENTER>
 ```
 
 Typing that into the command line took me to this screen, shown below:
@@ -80,7 +80,7 @@ Once I reached that point, I pressed the `<i>` key to enter insert mode. Then, I
 
 To check the tests, I had to compile and run `ListExamplesTests.java` again. The keys I pressed were:
 
-`<up><up><up><up><up>` to ` javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, and then `enter`. The  `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` was 5 up in the search history, so I used the up arrow to access it. Similarly, I accessed the `-cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` the same way, as it was 5 up in the history.
+`<up><up><up><up><up>` to `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, and then `enter`. The  `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` was 5 up in the search history, so I used the up arrow to access it. Similarly, I accessed the `-cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` the same way, as it was 5 up in the history.
 
 With that being done, the tests were compiled, ran, and passed! Here is what was returned in the terminal:
 
