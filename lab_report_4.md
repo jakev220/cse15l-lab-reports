@@ -84,10 +84,14 @@ To check the tests, I had to compile and run `ListExamplesTests.java` again. The
 `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java <ENTER>`.
 
 The 
+
 `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` 
+
 was 5 up in the search history, so I used the up arrow to access it.
 Similarly, I accessed the 
+
 `-cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` 
+
 the same way, as it was 5 up in the history.
 
 With that being done, the tests were compiled, ran, and passed! Here is what was returned in the terminal:
